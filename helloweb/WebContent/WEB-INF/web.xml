@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>helloweb</display-name>
+  
+  <listener>
+     <listener-class>com.training.hello.ContextListenerImpl</listener-class>
+  </listener>
+  
+  <listener>
+     <listener-class>com.training.hello.RequestListenerImpl</listener-class>
+  </listener>
+  
+  <filter>
+    <filter-name>samplefilter</filter-name>
+    <filter-class>com.training.filter.FilterSample</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>samplefilter</filter-name>
+    <url-pattern>/fir</url-pattern>
+  </filter-mapping>
+  <servlet>
+  
+    <servlet-name>first</servlet-name>
+    <servlet-class>com.training.hello.FirstServlet</servlet-class>
+    <init-param>
+    	<param-name>jdbcdriver</param-name>
+    	<param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+               
+  </servlet>
+  <servlet>
+    <servlet-name>second</servlet-name>
+    <servlet-class>com.training.hello.SecondServlet</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>third</servlet-name>
+    <servlet-class>com.training.hello.ThirdServlet</servlet-class>
+    </servlet>
+   
+   <servlet>
+    <servlet-name>include</servlet-name>
+    <servlet-class>com.training.hello.IncludeServlet</servlet-class>
+    </servlet>
+    <servlet>
+    <servlet-name>header</servlet-name>
+    <servlet-class>com.training.hello.HeaderServlet</servlet-class>
+    </servlet>
+    <servlet>
+    <servlet-name>footer</servlet-name>
+    <servlet-class>com.training.hello.FooterServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+    <servlet-name>redirect</servlet-name>
+    <servlet-class>com.training.hello.RedirectServlet</servlet-class>
+    </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>first</servlet-name>
+    <url-pattern>/fir</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>second</servlet-name>
+    <url-pattern>/sec</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet-mapping>
+    <servlet-name>third</servlet-name>
+    <url-pattern>/third</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>include</servlet-name>
+    <url-pattern>/include</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>footer</servlet-name>
+    <url-pattern>/footer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>header</servlet-name>
+    <url-pattern>/header</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>redirect</servlet-name>
+    <url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+  
+  <!-- http://localhost:8080/helloweb/fir -->
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

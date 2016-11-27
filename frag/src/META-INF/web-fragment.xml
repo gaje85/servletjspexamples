@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment id="WebFragment_ID" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd">
+<display-name>frag</display-name> 
+ <name>frag</name> 
+ 
+ <servlet>
+    <servlet-name>fragment</servlet-name>
+    <servlet-class>com.training.test.FragTest</servlet-class>
+   
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>fragment</servlet-name>
+    <url-pattern>/frag</url-pattern>
+  </servlet-mapping>
+  
+ </web-fragment> 
