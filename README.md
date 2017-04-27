@@ -1,6 +1,8 @@
 # Servlet and JSP Video Tutorial Samples
 
 This repository has sample code written for servlets and jsp video tutorial taken in Tamil language for www.guvi.in .
+https://www.guvi.in/course-detail?course=servletjsp
+Use "learnservletandjsp" code for 10% discount
 
 
 
